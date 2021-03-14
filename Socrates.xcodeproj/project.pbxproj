@@ -1,0 +1,793 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A0CCAB1233D31C900A3CD52 /* kekW.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A0CCAB0233D31C900A3CD52 /* kekW.png */; };
+		3A19AC062333C95300125634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC052333C95300125634 /* AppDelegate.swift */; };
+		3A19AC082333C95300125634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC072333C95300125634 /* SceneDelegate.swift */; };
+		3A19AC0A2333C95300125634 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC092333C95300125634 /* ViewController.swift */; };
+		3A19AC0D2333C95300125634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A19AC0B2333C95300125634 /* Main.storyboard */; };
+		3A19AC0F2333C95400125634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A19AC0E2333C95400125634 /* Assets.xcassets */; };
+		3A19AC122333C95400125634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A19AC102333C95400125634 /* LaunchScreen.storyboard */; };
+		3A19AC1D2333C95400125634 /* SocratesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC1C2333C95400125634 /* SocratesTests.swift */; };
+		3A19AC282333C95400125634 /* SocratesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC272333C95400125634 /* SocratesUITests.swift */; };
+		3A2C62AC2372279F009C4F45 /* ThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C62AB2372279F009C4F45 /* ThreadView.swift */; };
+		3A5109CD23950A8D004FABAC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5109CC23950A8D004FABAC /* ProfileView.swift */; };
+		3A7338CC2333D797000BBB27 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7338CB2333D797000BBB27 /* Registration.swift */; };
+		3A7338CE2333D7A4000BBB27 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7338CD2333D7A4000BBB27 /* Feed.swift */; };
+		3A9338962333CAF70060DE9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A9338952333CAF70060DE9B /* GoogleService-Info.plist */; };
+		3A97C68A236FAC74002F9BEB /* Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97C689236FAC74002F9BEB /* Topics.swift */; };
+		3A97C68C236FAD7F002F9BEB /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A97C68B236FAD7F002F9BEB /* TopicCell.swift */; };
+		3AB4A9C72374D55100AD0A01 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB4A9C62374D55100AD0A01 /* CommentView.swift */; };
+		3ABA90682370B8B300824AC2 /* UploadTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABA90672370B8B300824AC2 /* UploadTopic.swift */; };
+		3AC9014C23729A6C00B4EFBB /* UIButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9014B23729A6C00B4EFBB /* UIButtonAnimation.swift */; };
+		3AEFCC0923760EE6002EC3C4 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFCC0823760EE6002EC3C4 /* Comments.swift */; };
+		3AEFCC0B23760EF7002EC3C4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEFCC0A23760EF7002EC3C4 /* CommentCell.swift */; };
+		5AC47813F11271BD0A609827 /* Pods_SocratesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C4350B1D1AEDF9B96A2680 /* Pods_SocratesTests.framework */; };
+		BDE7165D0A309BBBEA9F7E9E /* Pods_SocratesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D816E8FEB9F201EA7B67501 /* Pods_SocratesUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A19AC192333C95400125634 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A19ABFA2333C95300125634 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A19AC012333C95300125634;
+			remoteInfo = Socrates;
+		};
+		3A19AC242333C95400125634 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A19ABFA2333C95300125634 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A19AC012333C95300125634;
+			remoteInfo = Socrates;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00375793AB7E1F2C123291FE /* Pods-SocratesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocratesUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocratesUITests/Pods-SocratesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		39B74BF6F584EC0DF8A6E2AC /* Pods-SocratesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocratesTests.release.xcconfig"; path = "Target Support Files/Pods-SocratesTests/Pods-SocratesTests.release.xcconfig"; sourceTree = "<group>"; };
+		3A0CCAB0233D31C900A3CD52 /* kekW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kekW.png; sourceTree = "<group>"; };
+		3A19AC022333C95300125634 /* Socrates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socrates.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A19AC052333C95300125634 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3A19AC072333C95300125634 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3A19AC092333C95300125634 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A19AC0C2333C95300125634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A19AC0E2333C95400125634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A19AC112333C95400125634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A19AC132333C95400125634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A19AC182333C95400125634 /* SocratesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocratesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A19AC1C2333C95400125634 /* SocratesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocratesTests.swift; sourceTree = "<group>"; };
+		3A19AC1E2333C95400125634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A19AC232333C95400125634 /* SocratesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocratesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A19AC272333C95400125634 /* SocratesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocratesUITests.swift; sourceTree = "<group>"; };
+		3A19AC292333C95400125634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2C62AB2372279F009C4F45 /* ThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadView.swift; sourceTree = "<group>"; };
+		3A5109CC23950A8D004FABAC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3A7338CB2333D797000BBB27 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		3A7338CD2333D7A4000BBB27 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		3A8D69DF23F23523009A5FD8 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9338952333CAF70060DE9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3A97C689236FAC74002F9BEB /* Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topics.swift; sourceTree = "<group>"; };
+		3A97C68B236FAD7F002F9BEB /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
+		3AB4A9C62374D55100AD0A01 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		3ABA90672370B8B300824AC2 /* UploadTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTopic.swift; sourceTree = "<group>"; };
+		3AC9014B23729A6C00B4EFBB /* UIButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonAnimation.swift; sourceTree = "<group>"; };
+		3AEFCC0823760EE6002EC3C4 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		3AEFCC0A23760EF7002EC3C4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		3B6F44D5415C4BA8D5B9D2C5 /* Pods-Socrates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socrates.debug.xcconfig"; path = "Target Support Files/Pods-Socrates/Pods-Socrates.debug.xcconfig"; sourceTree = "<group>"; };
+		6D816E8FEB9F201EA7B67501 /* Pods_SocratesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocratesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C4350B1D1AEDF9B96A2680 /* Pods_SocratesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocratesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B6F227E5D75CE6642FC90C6 /* Pods-Socrates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socrates.release.xcconfig"; path = "Target Support Files/Pods-Socrates/Pods-Socrates.release.xcconfig"; sourceTree = "<group>"; };
+		83765A2AD4CF72F543832C89 /* Pods-SocratesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocratesTests.debug.xcconfig"; path = "Target Support Files/Pods-SocratesTests/Pods-SocratesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		95D9CDCF400E3021AA2D8C62 /* Pods_Socrates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Socrates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A54BC45482F848C2825D1F /* Pods_Socrates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Socrates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0ED836A1E672736EC864CC /* Pods-SocratesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocratesUITests.release.xcconfig"; path = "Target Support Files/Pods-SocratesUITests/Pods-SocratesUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A19ABFF2333C95300125634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A19AC152333C95400125634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC47813F11271BD0A609827 /* Pods_SocratesTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A19AC202333C95400125634 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE7165D0A309BBBEA9F7E9E /* Pods_SocratesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A19ABF92333C95300125634 = {
+			isa = PBXGroup;
+			children = (
+				3A19AC042333C95300125634 /* Socrates */,
+				3A19AC1B2333C95400125634 /* SocratesTests */,
+				3A19AC262333C95400125634 /* SocratesUITests */,
+				3A19AC032333C95300125634 /* Products */,
+				F629F5BFF3D6CF465D300F68 /* Pods */,
+				EBE0358FBA0C73CB986F6D53 /* Frameworks */,
+				3AF33DC023F76C0D0040BA17 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		3A19AC032333C95300125634 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A19AC022333C95300125634 /* Socrates.app */,
+				3A19AC182333C95400125634 /* SocratesTests.xctest */,
+				3A19AC232333C95400125634 /* SocratesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A19AC042333C95300125634 /* Socrates */ = {
+			isa = PBXGroup;
+			children = (
+				3A19AC052333C95300125634 /* AppDelegate.swift */,
+				3A19AC072333C95300125634 /* SceneDelegate.swift */,
+				3A0CCAB0233D31C900A3CD52 /* kekW.png */,
+				3A19AC092333C95300125634 /* ViewController.swift */,
+				3A19AC0B2333C95300125634 /* Main.storyboard */,
+				3A7338CB2333D797000BBB27 /* Registration.swift */,
+				3A7338CD2333D7A4000BBB27 /* Feed.swift */,
+				3A19AC0E2333C95400125634 /* Assets.xcassets */,
+				3A19AC102333C95400125634 /* LaunchScreen.storyboard */,
+				3A9338952333CAF70060DE9B /* GoogleService-Info.plist */,
+				3A19AC132333C95400125634 /* Info.plist */,
+				3A97C689236FAC74002F9BEB /* Topics.swift */,
+				3A97C68B236FAD7F002F9BEB /* TopicCell.swift */,
+				3ABA90672370B8B300824AC2 /* UploadTopic.swift */,
+				3A2C62AB2372279F009C4F45 /* ThreadView.swift */,
+				3AC9014B23729A6C00B4EFBB /* UIButtonAnimation.swift */,
+				3AB4A9C62374D55100AD0A01 /* CommentView.swift */,
+				3AEFCC0823760EE6002EC3C4 /* Comments.swift */,
+				3AEFCC0A23760EF7002EC3C4 /* CommentCell.swift */,
+				3A5109CC23950A8D004FABAC /* ProfileView.swift */,
+			);
+			path = Socrates;
+			sourceTree = "<group>";
+		};
+		3A19AC1B2333C95400125634 /* SocratesTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A19AC1C2333C95400125634 /* SocratesTests.swift */,
+				3A19AC1E2333C95400125634 /* Info.plist */,
+			);
+			path = SocratesTests;
+			sourceTree = "<group>";
+		};
+		3A19AC262333C95400125634 /* SocratesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A19AC272333C95400125634 /* SocratesUITests.swift */,
+				3A19AC292333C95400125634 /* Info.plist */,
+			);
+			path = SocratesUITests;
+			sourceTree = "<group>";
+		};
+		3AF33DC023F76C0D0040BA17 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				E3A54BC45482F848C2825D1F /* Pods_Socrates.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		EBE0358FBA0C73CB986F6D53 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A8D69DF23F23523009A5FD8 /* GTMSessionFetcher.framework */,
+				95D9CDCF400E3021AA2D8C62 /* Pods_Socrates.framework */,
+				75C4350B1D1AEDF9B96A2680 /* Pods_SocratesTests.framework */,
+				6D816E8FEB9F201EA7B67501 /* Pods_SocratesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F629F5BFF3D6CF465D300F68 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B6F44D5415C4BA8D5B9D2C5 /* Pods-Socrates.debug.xcconfig */,
+				7B6F227E5D75CE6642FC90C6 /* Pods-Socrates.release.xcconfig */,
+				83765A2AD4CF72F543832C89 /* Pods-SocratesTests.debug.xcconfig */,
+				39B74BF6F584EC0DF8A6E2AC /* Pods-SocratesTests.release.xcconfig */,
+				00375793AB7E1F2C123291FE /* Pods-SocratesUITests.debug.xcconfig */,
+				ED0ED836A1E672736EC864CC /* Pods-SocratesUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A19AC012333C95300125634 /* Socrates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A19AC2C2333C95400125634 /* Build configuration list for PBXNativeTarget "Socrates" */;
+			buildPhases = (
+				D4F3398EC3257496CC1B0146 /* [CP] Check Pods Manifest.lock */,
+				3A19ABFE2333C95300125634 /* Sources */,
+				3A19ABFF2333C95300125634 /* Frameworks */,
+				3A19AC002333C95300125634 /* Resources */,
+				4F88E95D10C38426F26959DE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Socrates;
+			productName = Socrates;
+			productReference = 3A19AC022333C95300125634 /* Socrates.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A19AC172333C95400125634 /* SocratesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A19AC2F2333C95400125634 /* Build configuration list for PBXNativeTarget "SocratesTests" */;
+			buildPhases = (
+				5E05254DC9C70664FF736482 /* [CP] Check Pods Manifest.lock */,
+				3A19AC142333C95400125634 /* Sources */,
+				3A19AC152333C95400125634 /* Frameworks */,
+				3A19AC162333C95400125634 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A19AC1A2333C95400125634 /* PBXTargetDependency */,
+			);
+			name = SocratesTests;
+			productName = SocratesTests;
+			productReference = 3A19AC182333C95400125634 /* SocratesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A19AC222333C95400125634 /* SocratesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A19AC322333C95400125634 /* Build configuration list for PBXNativeTarget "SocratesUITests" */;
+			buildPhases = (
+				6BDA9F9381EF78A4674CB57F /* [CP] Check Pods Manifest.lock */,
+				3A19AC1F2333C95400125634 /* Sources */,
+				3A19AC202333C95400125634 /* Frameworks */,
+				3A19AC212333C95400125634 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A19AC252333C95400125634 /* PBXTargetDependency */,
+			);
+			name = SocratesUITests;
+			productName = SocratesUITests;
+			productReference = 3A19AC232333C95400125634 /* SocratesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A19ABFA2333C95300125634 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Harsh Patel";
+				TargetAttributes = {
+					3A19AC012333C95300125634 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					3A19AC172333C95400125634 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3A19AC012333C95300125634;
+					};
+					3A19AC222333C95400125634 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3A19AC012333C95300125634;
+					};
+				};
+			};
+			buildConfigurationList = 3A19ABFD2333C95300125634 /* Build configuration list for PBXProject "Socrates" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A19ABF92333C95300125634;
+			productRefGroup = 3A19AC032333C95300125634 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A19AC012333C95300125634 /* Socrates */,
+				3A19AC172333C95400125634 /* SocratesTests */,
+				3A19AC222333C95400125634 /* SocratesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A19AC002333C95300125634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A19AC122333C95400125634 /* LaunchScreen.storyboard in Resources */,
+				3A0CCAB1233D31C900A3CD52 /* kekW.png in Resources */,
+				3A9338962333CAF70060DE9B /* GoogleService-Info.plist in Resources */,
+				3A19AC0F2333C95400125634 /* Assets.xcassets in Resources */,
+				3A19AC0D2333C95300125634 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A19AC162333C95400125634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A19AC212333C95400125634 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F88E95D10C38426F26959DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Socrates/Pods-Socrates-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Socrates/Pods-Socrates-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Socrates/Pods-Socrates-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E05254DC9C70664FF736482 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocratesTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BDA9F9381EF78A4674CB57F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SocratesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4F3398EC3257496CC1B0146 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Socrates-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A19ABFE2333C95300125634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEFCC0B23760EF7002EC3C4 /* CommentCell.swift in Sources */,
+				3ABA90682370B8B300824AC2 /* UploadTopic.swift in Sources */,
+				3A7338CC2333D797000BBB27 /* Registration.swift in Sources */,
+				3A7338CE2333D7A4000BBB27 /* Feed.swift in Sources */,
+				3A19AC0A2333C95300125634 /* ViewController.swift in Sources */,
+				3A97C68A236FAC74002F9BEB /* Topics.swift in Sources */,
+				3A19AC062333C95300125634 /* AppDelegate.swift in Sources */,
+				3AC9014C23729A6C00B4EFBB /* UIButtonAnimation.swift in Sources */,
+				3A2C62AC2372279F009C4F45 /* ThreadView.swift in Sources */,
+				3A97C68C236FAD7F002F9BEB /* TopicCell.swift in Sources */,
+				3AB4A9C72374D55100AD0A01 /* CommentView.swift in Sources */,
+				3A19AC082333C95300125634 /* SceneDelegate.swift in Sources */,
+				3A5109CD23950A8D004FABAC /* ProfileView.swift in Sources */,
+				3AEFCC0923760EE6002EC3C4 /* Comments.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A19AC142333C95400125634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A19AC1D2333C95400125634 /* SocratesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A19AC1F2333C95400125634 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A19AC282333C95400125634 /* SocratesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A19AC1A2333C95400125634 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A19AC012333C95300125634 /* Socrates */;
+			targetProxy = 3A19AC192333C95400125634 /* PBXContainerItemProxy */;
+		};
+		3A19AC252333C95400125634 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A19AC012333C95300125634 /* Socrates */;
+			targetProxy = 3A19AC242333C95400125634 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A19AC0B2333C95300125634 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A19AC0C2333C95300125634 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A19AC102333C95400125634 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A19AC112333C95400125634 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A19AC2A2333C95400125634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3A19AC2B2333C95400125634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A19AC2D2333C95400125634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B6F44D5415C4BA8D5B9D2C5 /* Pods-Socrates.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC4RSBH3G8;
+				INFOPLIST_FILE = Socrates/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HP.Socrates;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3A19AC2E2333C95400125634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6F227E5D75CE6642FC90C6 /* Pods-Socrates.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC4RSBH3G8;
+				INFOPLIST_FILE = Socrates/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HP.Socrates;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3A19AC302333C95400125634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83765A2AD4CF72F543832C89 /* Pods-SocratesTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L46723T5V;
+				INFOPLIST_FILE = SocratesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HPTECH.SocratesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Socrates.app/Socrates";
+			};
+			name = Debug;
+		};
+		3A19AC312333C95400125634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B74BF6F584EC0DF8A6E2AC /* Pods-SocratesTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L46723T5V;
+				INFOPLIST_FILE = SocratesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HPTECH.SocratesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Socrates.app/Socrates";
+			};
+			name = Release;
+		};
+		3A19AC332333C95400125634 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00375793AB7E1F2C123291FE /* Pods-SocratesUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L46723T5V;
+				INFOPLIST_FILE = SocratesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HPTECH.SocratesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Socrates;
+			};
+			name = Debug;
+		};
+		3A19AC342333C95400125634 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED0ED836A1E672736EC864CC /* Pods-SocratesUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8L46723T5V;
+				INFOPLIST_FILE = SocratesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HPTECH.SocratesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Socrates;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A19ABFD2333C95300125634 /* Build configuration list for PBXProject "Socrates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A19AC2A2333C95400125634 /* Debug */,
+				3A19AC2B2333C95400125634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A19AC2C2333C95400125634 /* Build configuration list for PBXNativeTarget "Socrates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A19AC2D2333C95400125634 /* Debug */,
+				3A19AC2E2333C95400125634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A19AC2F2333C95400125634 /* Build configuration list for PBXNativeTarget "SocratesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A19AC302333C95400125634 /* Debug */,
+				3A19AC312333C95400125634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A19AC322333C95400125634 /* Build configuration list for PBXNativeTarget "SocratesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A19AC332333C95400125634 /* Debug */,
+				3A19AC342333C95400125634 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A19ABFA2333C95300125634 /* Project object */;
+}
