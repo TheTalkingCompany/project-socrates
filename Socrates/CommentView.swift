@@ -8,8 +8,8 @@
 
 import UIKit
 import KMPlaceholderTextView
-import Firebase
-
+import FirebaseAuth
+import FirebaseFirestore
 
 class CommentView: UIViewController {
 

@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import Firebase
+import FirebaseFirestore
 
 
 class UploadTopic: UIViewController {

@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 import TransitionButton
 
 class Registration: UIViewController, UITextFieldDelegate {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213874B626522A70001468F0 /* SettingsDefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213874B526522A70001468F0 /* SettingsDefaultCell.swift */; };
+		213874B826522D9E001468F0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213874B726522D9E001468F0 /* SettingsViewController.swift */; };
 		3A0512A32608670C00473E78 /* spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0512A22608670C00473E78 /* spinner.swift */; };
 		3A19AC062333C95300125634 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC052333C95300125634 /* AppDelegate.swift */; };
 		3A19AC082333C95300125634 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A19AC072333C95300125634 /* SceneDelegate.swift */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		00375793AB7E1F2C123291FE /* Pods-SocratesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocratesUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocratesUITests/Pods-SocratesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		213874B526522A70001468F0 /* SettingsDefaultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDefaultCell.swift; sourceTree = "<group>"; };
+		213874B726522D9E001468F0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		39B74BF6F584EC0DF8A6E2AC /* Pods-SocratesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocratesTests.release.xcconfig"; path = "Target Support Files/Pods-SocratesTests/Pods-SocratesTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A0512A22608670C00473E78 /* spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spinner.swift; sourceTree = "<group>"; };
 		3A19AC022333C95300125634 /* Socrates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socrates.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +172,8 @@
 				3AEFCC0A23760EF7002EC3C4 /* CommentCell.swift */,
 				3A5109CC23950A8D004FABAC /* ProfileView.swift */,
 				3A57893126488DE000A33477 /* TopicsCardDesign.swift */,
+				213874B526522A70001468F0 /* SettingsDefaultCell.swift */,
+				213874B726522D9E001468F0 /* SettingsViewController.swift */,
 			);
 			path = Socrates;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 			files = (
 				3AEFCC0B23760EF7002EC3C4 /* CommentCell.swift in Sources */,
 				3ABA90682370B8B300824AC2 /* UploadTopic.swift in Sources */,
+				213874B626522A70001468F0 /* SettingsDefaultCell.swift in Sources */,
 				3A7338CC2333D797000BBB27 /* Registration.swift in Sources */,
 				3A7338CE2333D7A4000BBB27 /* Feed.swift in Sources */,
 				3A19AC0A2333C95300125634 /* ViewController.swift in Sources */,
@@ -460,6 +467,7 @@
 				3A19AC082333C95300125634 /* SceneDelegate.swift in Sources */,
 				3A5109CD23950A8D004FABAC /* ProfileView.swift in Sources */,
 				3AEFCC0923760EE6002EC3C4 /* Comments.swift in Sources */,
+				213874B826522D9E001468F0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BC4RSBH3G8;
+				DEVELOPMENT_TEAM = X87SB8266V;
 				INFOPLIST_FILE = Socrates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -653,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BC4RSBH3G8;
+				DEVELOPMENT_TEAM = X87SB8266V;
 				INFOPLIST_FILE = Socrates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
