@@ -16,7 +16,7 @@ target 'Socrates' do
    pod 'FirebaseFirestoreSwift'
    pod 'TextFieldEffects'
    pod 'TransitionButton'
-
+   pod 'HGPlaceholders'
   target 'SocratesTests' do
     inherit! :search_paths
     # Pods for testing

@@ -8,17 +8,20 @@
 
 import UIKit
 import Firebase
+import HGPlaceholders
 
 
 
-class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     let topicID = "";
   
 //     private var tb: UITableView?
     var topicData: [Topics]=[]
+    var filteredData: [Topics]=[]
     var refreshControl = UIRefreshControl()
             override func viewDidLoad(){
             
@@ -26,7 +29,8 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
                 refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
                 tableView.addSubview(refreshControl)
-            
+                
+                searchBar.delegate = self
             // Do any additional setup after loading the view.
              
 //            self.tableView.register(TopicCell.self, forCellReuseIdentifier: "TopicCell")
@@ -110,10 +114,12 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                 }
 
                             }
-//
+
                         }
                     }
+                    
                     self.topicData=tempTopics
+                    self.filteredData = self.topicData
                     self.tableView.reloadData()
 
                 }
@@ -126,11 +132,45 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource {
            
         }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        if searchText == "" {
+            filteredData = self.topicData
+        }
+        else {
+            for topic in self.topicData {
+                if topic.message.lowercased().contains(searchText.lowercased()) {
+                filteredData.append(topic)
+            }
+        }
+        }
+        self.tableView.reloadData()
+        
+    }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        if self.filteredData.count != self.topicData.count {
+            self.filteredData = self.topicData
+            self.tableView.reloadData()
+        }
+        searchBar.endEditing(true)
+        searchBar.showsCancelButton = false
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let tcell = topicData[indexPath.row]
+        let tcell = filteredData[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TCELL") as! TopicCell
 
@@ -138,37 +178,29 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.setT(topics: tcell)
         
-        print((cell))
-        
         return cell
         
       }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        print("5")
-        return topicData.count
+        return filteredData.count
     }
-    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-////        print("5")
-//        return 1
-//    }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc=storyboard?.instantiateViewController(identifier: "ThreadView") as? ThreadView
         
-//            self.performSegue(withIdentifier: "Feed", sender: self)
+        vc?.selectedTopic = filteredData[indexPath.row].message
+        vc?.threadID = filteredData[indexPath.row].id
+        vc?.yesses = filteredData[indexPath.row].agrees
+        vc?.nos = filteredData[indexPath.row].disagrees
         
-        vc?.selectedTopic = topicData[indexPath.row].message
-        vc?.threadID = topicData[indexPath.row].id
-        vc?.yesses = topicData[indexPath.row].agrees
-        vc?.nos = topicData[indexPath.row].disagrees
-        print(topicData[indexPath.row].agrees)
         self.navigationController?.pushViewController(vc!, animated: true)
         
 
     }
+    
 
 }

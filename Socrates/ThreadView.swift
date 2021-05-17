@@ -10,12 +10,13 @@ import UIKit
 import Firebase
 import WebKit
 import SafariServices
+import HGPlaceholders
 
-class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource, PlaceholderDelegate {
     
     @IBOutlet weak var clickedTopic: UILabel!
     
-    @IBOutlet weak var commentTable: UITableView!
+    @IBOutlet weak var commentTable: TableView!
     
     //    @IBOutlet weak var sourceView: UITextView!
     
@@ -47,10 +48,13 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         //        view.addSubview(imageView)
         
         //        tableView.allowsSelection = false
-        commentTable.allowsSelection = false
+        commentTable.allowsSelection = true
         clickedTopic.text = "\(selectedTopic)"
         yesCount.text = "\(yesses)"
         noCount.text = "\(nos)"
+        commentTable.showDefault()
+        commentTable.showDefault()
+        
         getComments()
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
         
@@ -70,6 +74,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     
     @objc func loadList(notification: NSNotification){
         //load data here
+        commentTable.showDefault()
         getComments()
     }
     
@@ -91,7 +96,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             db.collection("comments").whereField("debateTopic", isEqualTo: self.selectedTopic).whereField("postID", isEqualTo: post).getDocuments{(querysnapshot,error) in
                 
                 if error != nil{
-                    
+                    self.commentTable.showErrorPlaceholder()
                     print(error as Any)
                 }
                     
@@ -427,10 +432,16 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         
     }
     
-    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    //
-    //        print("which comes first")
-    //    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let url = URL(string: "https://"+topicComment[indexPath.row].source) {
+            let safariVC = SFSafariViewController(url: url)
+            
+            present(safariVC, animated: true, completion: nil)
+        }
+        
+        print("which comes first")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return topicComment.count
@@ -563,6 +574,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         super.viewWillAppear(animated)
         //        topicData = createTopics()
         //            commentTable.reloadData()
+        commentTable.showDefault()
         print("infinite")
         getComments()
         commentTable.estimatedRowHeight = 100
@@ -976,6 +988,12 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         
     }
     
+    func view(_ view: Any, actionButtonTappedFor placeholder: Placeholder) {
+        print(placeholder.key.value)
+    }
+    
+    
+
     
     
     
@@ -993,4 +1011,6 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
         
         
     }
+    
 }
+

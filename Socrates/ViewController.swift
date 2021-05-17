@@ -24,27 +24,52 @@ class ViewController: UIViewController, UITextFieldDelegate {
         loggpass.delegate = self
 
        
+        //clear placeholder text on touch
+        loggEmail.addTarget(self, action: #selector(clearEmailPHT), for: .touchDown)
+        loggpass.addTarget(self, action: #selector(clearPasswordPHT), for: .touchDown)
+
+
         // Do any additional setup after loading the view.
     }
+    
+    //clear placeholder text
+    @objc func clearEmailPHT(textField: UITextField) {
+        self.loggEmail.placeholder = ""
+    }
+    
+    @objc func clearPasswordPHT(textField: UITextField) {
+        self.loggpass.placeholder = ""
+    }
 
-
-    @IBAction func LoggedIn(_ sender: Any) {
+    @IBAction func LoggedIn(_ button: TransitionButton) {
         
         if(loggEmail.text?.last==" "){
             loggEmail.text?.removeLast(1)
         }
-            
         
         
+        button.startAnimation()
         Auth.auth().signIn(withEmail: loggEmail.text!, password: loggpass.text!) { user, error in
             //Check that user isn't nil
                         if let u = user {
                                 //User is found, goto home screen
+                            self.showSpinner()
                             self.performSegue(withIdentifier: "Feed", sender: self)
                             
                         }
                         else{
+                            button.stopAnimation(animationStyle: .shake, completion: {
+                                if self.loggEmail.text=="" {
+                                    self.loggEmail.placeholder = "Please enter an email"
+                                }
+                                
+                                if self.loggpass.text=="" {
+                                self.loggpass.placeholder = "Please enter a password"
+                                 }
+                                     
                             
+                            })
+                            self.removeSpinner()
                             print("failed")
                         }
             

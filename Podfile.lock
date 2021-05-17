@@ -281,6 +281,7 @@ PODS:
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
   - GTMSessionFetcher/Core (1.3.1)
+  - HGPlaceholders (0.5.0)
   - KMPlaceholderTextView (1.4.0)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
@@ -299,6 +300,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - HGPlaceholders
   - KMPlaceholderTextView
   - TextFieldEffects
   - TransitionButton
@@ -326,6 +328,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - HGPlaceholders
     - KMPlaceholderTextView
     - leveldb-library
     - nanopb
@@ -355,6 +358,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
   GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
+  HGPlaceholders: cbf8caed8360fc2ab5e8a4610cce61f76fbd2c37
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
@@ -362,6 +366,6 @@ SPEC CHECKSUMS:
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   TransitionButton: fb271583d9c9e4bb116b97103047e5157653f233
 
-PODFILE CHECKSUM: 4a263f50bab94592a80b77b95e8e05ece361d1b4
+PODFILE CHECKSUM: 272c954526ee0c8bce798c5ed4b050673332d02a
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1
