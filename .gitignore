@@ -38,6 +38,9 @@ DerivedData/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+Socrates.xcodeproj/project.pbxproj
+Socrates/SettingsDefaultCell.swift
+Socrates/SettingsViewController.swift
 
 # Swift Package Manager
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
