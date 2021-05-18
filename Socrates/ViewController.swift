@@ -53,6 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             //Check that user isn't nil
                         if let u = user {
                                 //User is found, goto home screen
+                            UserDefaults.standard.setValue(true, forKey: "LoginKey")
                             self.showSpinner()
                             self.performSegue(withIdentifier: "Feed", sender: self)
                             

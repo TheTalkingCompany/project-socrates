@@ -69,7 +69,8 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
             let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
-        self.performSegue(withIdentifier: "loggedOut", sender: self)
+            UserDefaults.standard.setValue(false, forKey: "LoginKey")
+            self.performSegue(withIdentifier: "loggedOut", sender: self)
             print("successful")
             
         } catch let signOutError as NSError {

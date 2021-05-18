@@ -338,7 +338,7 @@
         <!--Topics-->
         <scene sceneID="ZRs-UH-DyV">
             <objects>
-                <viewController id="fjn-Oa-NXU" customClass="Feed" customModule="Socrates" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" id="fjn-Oa-NXU" customClass="Feed" customModule="Socrates" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8UW-2N-JRk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -668,7 +668,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="kp4-dK-zbU">
             <objects>
-                <tabBarController id="CCt-d0-xDn" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" id="CCt-d0-xDn" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qbt-s7-uLz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1027,7 +1027,7 @@
     </designables>
     <inferredMetricsTieBreakers>
         <segue reference="ngD-an-BWj"/>
-        <segue reference="7sg-Hc-0p3"/>
+        <segue reference="wIt-8N-DoU"/>
         <segue reference="gGe-X6-qr2"/>
     </inferredMetricsTieBreakers>
     <resources>
