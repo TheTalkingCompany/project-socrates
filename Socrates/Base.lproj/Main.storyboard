@@ -578,7 +578,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bU-dM-zD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1701.449275362319" y="711.83035714285711"/>
+            <point key="canvasLocation" x="-2791" y="791"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="ANI-Yr-Z9h">
+            <objects>
+                <viewController id="43Y-vV-vZ8" customClass="SettingsViewController" customModule="Socrates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fjg-1R-5Ho">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Em7-fj-ndw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="ZJ1-st-e8x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13L-Lw-93M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1701" y="791"/>
         </scene>
         <!--Comment View-->
         <scene sceneID="Udf-0Z-PM2">
@@ -677,6 +693,7 @@
                     <connections>
                         <segue destination="kQc-7E-Dqz" kind="relationship" relationship="viewControllers" id="wfL-kW-43h"/>
                         <segue destination="WLv-qH-sBM" kind="relationship" relationship="viewControllers" id="PyQ-cJ-wHf"/>
+                        <segue destination="43Y-vV-vZ8" kind="relationship" relationship="viewControllers" id="ifs-OU-w8H"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RPe-iJ-OWl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1001,10 +1018,10 @@
     </scenes>
     <designables>
         <designable name="2JX-Lg-nbQ">
-            <size key="intrinsicContentSize" width="119" height="34.5"/>
+            <size key="intrinsicContentSize" width="123" height="38.5"/>
         </designable>
         <designable name="Hwm-3w-P1h">
-            <size key="intrinsicContentSize" width="65" height="34.5"/>
+            <size key="intrinsicContentSize" width="69" height="38.5"/>
         </designable>
         <designable name="IaY-AL-lW9">
             <size key="intrinsicContentSize" width="58" height="41"/>
@@ -1013,13 +1030,13 @@
             <size key="intrinsicContentSize" width="91" height="41"/>
         </designable>
         <designable name="QTo-BI-D0z">
-            <size key="intrinsicContentSize" width="10" height="33"/>
+            <size key="intrinsicContentSize" width="14" height="37"/>
         </designable>
         <designable name="ZkU-yq-yeu">
-            <size key="intrinsicContentSize" width="113.5" height="34.5"/>
+            <size key="intrinsicContentSize" width="117.5" height="38.5"/>
         </designable>
         <designable name="khv-c3-ny3">
-            <size key="intrinsicContentSize" width="10" height="34.5"/>
+            <size key="intrinsicContentSize" width="14" height="38.5"/>
         </designable>
         <designable name="zWF-wY-Yfb">
             <size key="intrinsicContentSize" width="82" height="41"/>
@@ -1032,6 +1049,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="argue" width="50" height="50"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

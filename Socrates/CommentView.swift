@@ -95,13 +95,8 @@ class CommentView: UIViewController {
                                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
 
                                     self.dismiss(animated: true, completion: nil)
-                                    
-                              
-                                  
-                                     
                                   }
                               }
-
     }
     
     @IBAction func cancel(_ sender: Any) {

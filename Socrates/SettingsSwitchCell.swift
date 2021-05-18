@@ -1,5 +1,5 @@
 //
-//  SettingsDefaultCell.swift
+//  SettingsSwitchCell.swift
 //  Socrates
 //
 //  Created by David Jabech on 5/17/21.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class SettingsDefaultCell: UITableViewCell {
+class SettingsSwitchCell: UITableViewCell {
 
-    static let identifier = "settingsDefaultCell"
+    static let identifier = "settingsSwitchCell"
     
     private let title: UILabel = {
         let label = UILabel()
@@ -31,13 +31,21 @@ class SettingsDefaultCell: UITableViewCell {
         return imageView
     }()
     
+    private let mySwitch: UISwitch = {
+        let mySwitch = UISwitch()
+        mySwitch.isOn = false
+        return mySwitch
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(title)
+        contentView.addSubview(mySwitch)
         contentView.addSubview(iconContainer)
         iconContainer.addSubview(iconImage)
+        
         contentView.clipsToBounds = true
-        accessoryType = .disclosureIndicator
+        accessoryType = .none
     }
     
     required init?(coder: NSCoder) {
@@ -53,19 +61,21 @@ class SettingsDefaultCell: UITableViewCell {
                              y: 0,
                              width: contentView.frame.size.width-15-iconContainer.frame.size.width,
                              height: contentView.frame.size.height)
+        mySwitch.sizeToFit()
+        mySwitch.frame = CGRect(x: (contentView.frame.size.width-mySwitch.frame.size.width)-15,
+                                y: (contentView.frame.size.height-mySwitch.frame.size.height)/2,
+                                width: mySwitch.frame.size.width,
+                                height: mySwitch.frame.size.height)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        title.text = ""
-        iconImage.image = nil
-        iconContainer.backgroundColor = .white
     }
     
-    public func configure(with model: DefaultSettingsOption) {
+    public func configure(with model: SwitchSettingsOption) {
         title.text = model.title
         iconImage.image = model.image
+        mySwitch.isOn = model.isOn!
         iconContainer.backgroundColor = model.backgroundColor
     }
-    
 }
