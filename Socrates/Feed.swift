@@ -32,9 +32,7 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
                 tableView.addSubview(refreshControl)
                 
                 searchBar.delegate = self
-            // Do any additional setup after loading the view.
-             
-//            self.tableView.register(TopicCell.self, forCellReuseIdentifier: "TopicCell")
+            
                 
             
             createTopics()
@@ -176,8 +174,10 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TCELL") as! TopicCell
 
-        
-        
+        //removes gray color when selecting cell
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.white
+        cell.selectedBackgroundView = backgroundView
         cell.setT(topics: tcell)
         
         return cell

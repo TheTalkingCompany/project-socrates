@@ -11,7 +11,7 @@ import UIKit
 
 @IBDesignable class TopicsCardDesign: UIView {
     
-    @IBInspectable var cornerRadius: CGFloat = 0
+    @IBInspectable var cornerRadius: CGFloat = 7
     @IBInspectable var shadowColor: UIColor? = UIColor.black
     
     @IBInspectable var shadowOffSetWidth: Int = 0

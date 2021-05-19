@@ -11,32 +11,27 @@ import UIKit
 
 class TopicCell: UITableViewCell {
     
-    @IBOutlet weak var c: UILabel!
-    
     @IBOutlet weak var commentCount: UILabel!
-    
     @IBOutlet weak var topic: UILabel!
     @IBOutlet weak var watchCount: UILabel!
-    @IBOutlet weak var eye: UILabel!
-    
-    @IBOutlet weak var agrees: UILabel!
     @IBOutlet weak var agreeCount: UILabel!
-    
-    @IBOutlet weak var disagrees: UILabel!
-    
+    @IBOutlet weak var eyeIcon: UIImageView!
     @IBOutlet weak var disagreeCount: UILabel!
+    @IBOutlet weak var agreeIcon: UIImageView!
+    @IBOutlet weak var disagreeIcon: UIImageView!
+    @IBOutlet weak var commentIcon: UIImageView!
     
     func setT(topics: Topics) {
-        
-        c.text = "C:"
-        eye.text = "Eye:"
-        disagrees.text = "N:"
-        agrees.text = "Y:"
+        eyeIcon.image = UIImage(systemName: "eye.fill")
+        agreeIcon.image = UIImage(systemName: "hand.thumbsup.fill")
+        disagreeIcon.image = UIImage(systemName: "hand.thumbsdown.fill")
+        commentIcon.image = UIImage(systemName: "text.bubble.fill")
         commentCount.text = String(topics.comCount)
         watchCount.text = String(topics.watchCount)
         disagreeCount.text = String(topics.disagrees)
         agreeCount.text = String(topics.agrees)
         topic.text = topics.message
+        
     }
 //
 }
