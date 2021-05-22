@@ -1,0 +1,6 @@
+framework module Pods_SocratesUITests {
+  umbrella header "Pods-SocratesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
