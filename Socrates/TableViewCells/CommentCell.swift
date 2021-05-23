@@ -28,32 +28,32 @@ class CommentCell: UITableViewCell, UITextViewDelegate {
     
     var updateFact : (() -> Void)? = nil
     var updateOP : (() -> Void)? = nil
-  
+    
     
     func setC(comment: Comments) {
-//        sourceView.delegate = self
-//        sourceView.translatesAutoresizingMaskIntoConstraints=true
-//        sourceView.isScrollEnabled = false
-          
-             
+        //        sourceView.delegate = self
+        //        sourceView.translatesAutoresizingMaskIntoConstraints=true
+        //        sourceView.isScrollEnabled = false
+        
+        
         sourceView.text = comment.source
         username.text = comment.uid
         userCom.text = String(comment.message)
         commFacts.text = String(comment.facts)
         commOpinions.text = String(comment.opinions)
-//        Facts.text = "Facts:"
-//        Opinions.text = "Opinions:"
+        //        Facts.text = "Facts:"
+        //        Opinions.text = "Opinions:"
         
-       }
+    }
     
     
     @IBAction func factButton(_ sender: Any) {
         
         if let factButton = self.updateFact
-              {
-                  factButton()
-                //  user!("pass string")
-              }
+        {
+            factButton()
+            //  user!("pass string")
+        }
         
         
     }
@@ -61,16 +61,11 @@ class CommentCell: UITableViewCell, UITextViewDelegate {
     
     @IBAction func opinionButton(_ sender: Any) {
         
-       
-        if let opinionButton = self.updateOP
-                    {
-                      
-                        opinionButton()
-                    }
-              
         
+        if let opinionButton = self.updateOP
+        {
+            
+            opinionButton()
+        }
     }
-    
-    
-//
 }

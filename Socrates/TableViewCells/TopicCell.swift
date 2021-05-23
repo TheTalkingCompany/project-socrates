@@ -11,6 +11,7 @@ import UIKit
 
 class TopicCell: UITableViewCell {
     
+    @IBOutlet weak var topicVIew: TopicsCardDesign!
     @IBOutlet weak var commentCount: UILabel!
     @IBOutlet weak var topic: UILabel!
     @IBOutlet weak var watchCount: UILabel!
@@ -22,6 +23,11 @@ class TopicCell: UITableViewCell {
     @IBOutlet weak var commentIcon: UIImageView!
     
     func setT(topics: Topics) {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        tap.cancelsTouchesInView = false
+        topicVIew.addGestureRecognizer(tap)
+        topicVIew.backgroundColor = UIColor.white
+
         eyeIcon.image = UIImage(systemName: "eye.fill")
         agreeIcon.image = UIImage(systemName: "hand.thumbsup.fill")
         disagreeIcon.image = UIImage(systemName: "hand.thumbsdown.fill")
@@ -33,5 +39,10 @@ class TopicCell: UITableViewCell {
         topic.text = topics.message
         
     }
-//
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
+        topicVIew.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
+    }
+    
+    
 }
