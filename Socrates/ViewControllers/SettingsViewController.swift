@@ -71,13 +71,13 @@ class SettingsViewController: UIViewController {
                                                 ]))
         settingsSections.append(SettingsSection(title: "",
                                                 options: [.defaultCell(model: DefaultSettingsOption(title: "Remove Ads",
-                                                                                                                image: UIImage(systemName: "nosign"),
-                                                                                                                backgroundColor: .systemRed,
-                                                                                                                handler: { }))
-        ]))
+                                                                                                    image: UIImage(systemName: "nosign"),
+                                                                                                    backgroundColor: .systemRed,
+                                                                                                    handler: { }))
+                                                ]))
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(settingsTable)
@@ -103,7 +103,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = settingsSections[indexPath.section].options[indexPath.row]
-       
+        
         switch model {
         case .defaultCell(model: let model):
             guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsDefaultCell.identifier, for: indexPath) as? SettingsDefaultCell else {

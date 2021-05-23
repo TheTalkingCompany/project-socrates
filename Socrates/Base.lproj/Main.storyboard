@@ -478,6 +478,7 @@
                                             <outlet property="disagreeIcon" destination="4dc-Yf-LVf" id="DN8-fO-ZGZ"/>
                                             <outlet property="eyeIcon" destination="XbA-bU-WYc" id="LY1-Tc-v95"/>
                                             <outlet property="topic" destination="EvV-Vk-Kx4" id="BrJ-IX-AX1"/>
+                                            <outlet property="topicVIew" destination="O5e-gO-TEJ" id="9bE-QG-GWQ"/>
                                             <outlet property="watchCount" destination="owL-v7-GCc" id="fDF-Mh-m9O"/>
                                         </connections>
                                     </tableViewCell>
@@ -1113,6 +1114,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="uqu-5t-KO6"/>
         <segue reference="ngD-an-BWj"/>
         <segue reference="7sg-Hc-0p3"/>
         <segue reference="gGe-X6-qr2"/>

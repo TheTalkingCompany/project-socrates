@@ -19,118 +19,116 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
     
     @IBOutlet weak var searchBar: UISearchBar!
     let topicID = "";
-  
-//     private var tb: UITableView?
+    
+    //     private var tb: UITableView?
     var topicData: [Topics]=[]
     var filteredData: [Topics]=[]
     var refreshControl = UIRefreshControl()
-            override func viewDidLoad(){
-            
-            super.viewDidLoad()
-                refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-                refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-                tableView.addSubview(refreshControl)
-                
-                searchBar.delegate = self
-            
-                
-            
-            createTopics()
-
-        }
-
+    override func viewDidLoad(){
+        
+        super.viewDidLoad()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
+        searchBar.delegate = self
+        
+        
+        
+        createTopics()
+        
+    }
     
-   @objc func refresh() {
     
-    createTopics()
-    refreshControl.endRefreshing()
+    @objc func refresh() {
+        
+        createTopics()
+        refreshControl.endRefreshing()
         
         
     }
     override func viewWillAppear(_ animated: Bool) {
         
-       super.viewWillAppear(animated)
-       createTopics()
-       
-
-
+        super.viewWillAppear(animated)
+        createTopics()
+        
     }
     
     @IBAction func addTopic(_ sender: Any) {
         
- 
+        
     }
     
     
     
     @IBAction func logOut(_ sender: Any) {
-            let firebaseAuth = Auth.auth()
+        let firebaseAuth = Auth.auth()
         do {
-          try firebaseAuth.signOut()
+            try firebaseAuth.signOut()
             UserDefaults.standard.setValue(false, forKey: "LoginKey")
             self.performSegue(withIdentifier: "loggedOut", sender: self)
             print("successful")
             
         } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
+            print ("Error signing out: %@", signOutError)
         }
-          
+        
         
     }
-
+    
+    
+    
+    func createTopics() {
         
+        var tempTopics: [Topics]=[]
         
-        func createTopics() {
-            
-            var tempTopics: [Topics]=[]
-
-            let db = Firestore.firestore()
-            db.collection("topics").getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        print("\(document.documentID) => \(document.data())")
-
-                        if let message = document.data()["topic"] as? String{
+        let db = Firestore.firestore()
+        db.collection("topics").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                    if let message = document.data()["topic"] as? String{
+                        
+                        if let agrees = document.data()["agrees"] as? Int{
                             
-                            if let agrees = document.data()["agrees"] as? Int{
+                            if let disagrees = document.data()["disagrees"] as? Int{
                                 
-                                if let disagrees = document.data()["disagrees"] as? Int{
+                                if let id = document.data()["id"] as? String{
                                     
-                                    if let id = document.data()["id"] as? String{
-
                                     if let comCount = document.data()["comCount"] as? Int{
-
+                                        
                                         if let watchCount = document.data()["watchCount"] as? Int{
                                             let t =  Topics(message: message, comCount: comCount, watchCount: watchCount, agrees: agrees, disagrees: disagrees, id: id)
                                             tempTopics.append(t)
-                                   
-                                            }
+                                            
                                         }
-                                        
                                     }
                                     
                                 }
-
+                                
                             }
-
+                            
                         }
+                        
                     }
-                    
-                    self.topicData=tempTopics
-                    self.filteredData = self.topicData
-                    self.tableView.reloadData()
-
                 }
+                
+                self.topicData=tempTopics
+                self.filteredData = self.topicData
+                self.tableView.reloadData()
+                
             }
-           
-            
-        
-            
-            
-           
         }
+        
+        
+        
+        
+        
+        
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -141,9 +139,9 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
         else {
             for topic in self.topicData {
                 if topic.message.lowercased().contains(searchText.lowercased()) {
-                filteredData.append(topic)
+                    filteredData.append(topic)
+                }
             }
-        }
         }
         self.tableView.reloadData()
         
@@ -173,7 +171,7 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
         let tcell = filteredData[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TCELL") as! TopicCell
-
+        
         //removes gray color when selecting cell
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.white
@@ -182,10 +180,10 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
         
         return cell
         
-      }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("5")
+        //        print("5")
         return filteredData.count
     }
     
@@ -201,8 +199,8 @@ class Feed: UIViewController, UITableViewDelegate, UITableViewDataSource, UISear
         
         self.navigationController?.pushViewController(vc!, animated: true)
         
-
+        
     }
     
-
+    
 }

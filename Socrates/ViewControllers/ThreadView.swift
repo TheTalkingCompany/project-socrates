@@ -100,7 +100,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                     self.commentTable.showErrorPlaceholder()
                     print(error as Any)
                 }
-                    
+                
                 else{
                     
                     //see if person already liked it
@@ -115,7 +115,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                             
                             print(error as Any)
                         }
-                            
+                        
                         else{
                             
                             for document in snapshot!.documents {
@@ -149,7 +149,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                                     
                                     
                                 }
-                                    
+                                
                                 else{
                                     
                                     db.collection("commentStats").document(document.documentID).setData([ "fact": true ], merge: true)
@@ -268,7 +268,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                     
                     print(error as Any)
                 }
-                    
+                
                 else{
                     
                     //see if person already liked it
@@ -283,7 +283,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                             
                             print("enters here")
                         }
-                            
+                        
                         else{
                             
                             for document in snapshot!.documents {
@@ -317,7 +317,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                                     
                                     
                                 }
-                                    
+                                
                                 else if yes==false{
                                     
                                     db.collection("commentStats").document(document.documentID).setData([ "opinion": true ], merge: true)
@@ -400,7 +400,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                                             let newAgreeCount = (Int(cell.commOpinions.text!) ?? 0) + 1
                                             cell.commOpinions.text = "\(newAgreeCount)"
                                             self.masterUpdateCredibility(postId: post, factOrOpinion: "opinions", decOrInc: 1)
-    
+                                            
                                         }
                                         
                                         
@@ -485,7 +485,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                 
                 print(error as Any)
             }
-                
+            
             else{
                 for document in querysnapshot!.documents {
                     //                                        print("\(document.documentID) => \(document.data())")
@@ -533,7 +533,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                         
                         print(error as Any)
                     }
-                        
+                    
                     else{
                         
                         for document in querysnapshot!.documents {
@@ -594,7 +594,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
             if error != nil{
                 print(error as Any)
             }
-                
+            
             else{
                 
                 //see if person already liked it
@@ -610,7 +610,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                         
                         print("No such entry exists, and this is how you fix it")
                     }
-                        
+                    
                     else{
                         
                         for document in snapshot!.documents {
@@ -643,7 +643,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                                 
                                 
                             }
-                                
+                            
                             else{
                                 
                                 db.collection("topicYes").document(document.documentID).setData([ "yes": true ], merge: true)
@@ -759,7 +759,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                 
                 print(error as Any)
             }
-                
+            
             else{
                 //see if person already liked it
                 let findPersonForResponse = db.collection("topicYes")
@@ -773,7 +773,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                         
                         print(error as Any)
                     }
-                        
+                    
                     else{
                         
                         for document in snapshot!.documents {
@@ -807,7 +807,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                                 
                                 
                             }
-                                
+                            
                             else{
                                 
                                 db.collection("topicYes").document(document.documentID).setData([ "no": true ], merge: true)
@@ -938,15 +938,15 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                     if decOrInc == 1{
                         
                         incField.updateData([
-                            factOrOpinion: FieldValue.increment(Int64(1))]
+                                                factOrOpinion: FieldValue.increment(Int64(1))]
                         )
                         
                     }
-                        
+                    
                     else {
                         
                         incField.updateData([
-                            factOrOpinion: FieldValue.increment(Int64(-1))]
+                                                factOrOpinion: FieldValue.increment(Int64(-1))]
                         )
                     }
                     
@@ -977,7 +977,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
                         self.updateUserCredibility(factOrOpinion: factOrOpinion, id: id, decOrInc: decOrInc)
                         
                     }
-                        
+                    
                     else {
                         print("No username found for that post")
                     }
@@ -994,7 +994,7 @@ class ThreadView: UIViewController, UITextViewDelegate, UITableViewDelegate, UIT
     }
     
     
-
+    
     
     
     
